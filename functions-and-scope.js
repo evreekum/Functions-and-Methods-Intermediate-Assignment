@@ -14,16 +14,44 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
-function cumLaude(grades[i]) {
+/*function cumLaude() {
     for (let i = 0; i < grades.length; i++) {
         if (grades[i] >= 8) {
-            count += 1;
-            // const totalCumLaude = grades.filter(grades >= 8 === )
-            console.log(grades[i]);
+            console.log(grades.length[i] >=8);
+            // return grades[i] +1;
+            // const cumLaude = grades[i];
+            // console.log(cumLaude);
         }
     }
-    // return grades[i]
+}*/
+
+/*const cumLaude = [];
+
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] >= 8) {
+        cumLaude.push (grades[i]);
+
+    }
 }
+console.log(cumLaude.length);*/
+
+let cumLaudeCount = 0;
+
+for (let i = 0; i <grades.length; i++) {
+    if (grades[i] >= 8) {
+        cumLaudeCount = cumLaudeCount +1;
+    }
+}
+console.log(cumLaudeCount);
+
+/*for (let i = 0; i < grades.length; i++) {
+    if (grades >= 8) {
+        // const totalCumLaude = grades[i];
+        // const totalCumLaude = grades.filter(grades >= 8 === )
+        console.log(grades[i]);
+    }
+}*/
+
 // ---- Verwachte uitkomst: 6
 
 
