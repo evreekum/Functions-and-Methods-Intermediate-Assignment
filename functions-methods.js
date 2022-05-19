@@ -9,6 +9,21 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
+// Declareer een functie met een parameter (emailadres)
+// Zoeken naar @ gebruik indexOf() methode
+// Alles na @ afknippen met substring ()
+// Return domain name
+
+
+function getEmailDomain (emailAdres) {
+    const apenStaartje = emailAdres.indexOf ("@");
+    const domain = emailAdres.substring(apenStaartje + 1);
+    return domain;
+}
+const domainOne = getEmailDomain("n.eeken@novi-education.nl");
+const domainTwo = getEmailDomain("t.mellink@novi.nl");
+const domainThree = getEmailDomain("a.wiersma@outlook.com");
+console.log(domainThree);
 
 
 
@@ -17,8 +32,24 @@
 // ---- Verwachte uitkomsten:
 // typeOfEmail("n.eeken@novi-education.nl") geeft "Student"
 // typeOfEmail("t.mellink@novi.nl") geeft geeft "Medewerker"
-// typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
+// typeOfEmail("novi.nlaapjesk@outlook.com") geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
+
+function typeOfEmail (email) {
+    const userIndex = email.indexOf("@");
+    const typeOfUser = email.substring(userIndex + 1);
+    if (typeOfUser.includes("novi-education.nl")) {
+        return "Student";
+    } if (typeOfUser.includes("novi.nl")) {
+        return "Medewerker";
+    } else {
+        return "Extern";
+    }
+
+}
+const domainTypeOne = typeOfEmail("n.eeken@novi-education.nl");
+const domainTypeTwo = typeOfEmail("n.eeken@novi.nl");
+console.log(domainTypeTwo);
 
 
 
